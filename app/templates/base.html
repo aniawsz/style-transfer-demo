@@ -1,21 +1,25 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>{% block title %}{% endblock %} - Push Demo</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %} - Push Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100');
+    </style>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100');
-</style>
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    <nav>
+      <h1>Push Display Demo</h1>
+    </nav>
 
-<nav>
-  <h1>Push Display Demo</h1>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
-  </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+    {% block content %}
+    {% endblock %}
+
+    {% block bottom %}
+    {% endblock %}
+  </body>
+</html>

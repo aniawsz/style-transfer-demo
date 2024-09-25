@@ -1,5 +1,6 @@
 # Style Transfer Demo App
 
+An interface for exploring a style transfer audio effect, built using web technologies.
 This app loads a [RAVE](https://github.com/acids-ircam/RAVE) model and enables navigating its latent space with controls.
 
 This is a Python app with a web UI. In order to run it:

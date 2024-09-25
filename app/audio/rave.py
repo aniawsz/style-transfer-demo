@@ -68,11 +68,3 @@ if __name__ == "__main__":
 
     result = rave_model.forward(input_)
     play(result[0][0], fs)
-
-"""
-TODOs:
-* turn into a callback mode; generate buffer per buffer, in the web app (automatic playback after opening a page)
-* test on the same sample as in Live (export the sample); if the sound is not the same, check if input frames need to be reshaped
-* expose latent dimensions and enable their modification
-* enable loading and looping an audio sample?
-"""
